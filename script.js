@@ -12,7 +12,6 @@ function writePassword() {
 }
 
 // KNOWN ISSUES:
-// - NOTHING RUNS AFTER PROMPT WINDOW
 // - NEED TO CHECK THAT CONFIRMS ARE ADDING CORRECT VALUE TO ARRAY OF FUNCTIONS, ETC
 
 var charLowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -33,53 +32,41 @@ function generatePassword()
 {
   var yesGen = window.confirm("Would you like to generate a password?");
   if (yesGen) {
-    var passLength = window.prompt("How many characters would you like to include (must be between 8 and 128)?", [num]);
-    console.log(passLength);
-    console.log(charLowCase[0]);
-    // var not taking on value of user input? -- won't print in console
-    // runs prompt and accepts input but refuses to run anything after that even console.log?
-    console.log(typeof passLength);
-    if (passLength >== 8 && passLength <== 128) {
-      // problem begins here -- does not pop up confirms once a number is entered
+    var passLength = window.prompt("How many characters would you like to include (must be between 8 and 128)?");
+    if (passLength >= 8 && passLength <= 128) {
       var lowCase = window.confirm("Would you like to include lower case letters?");
-      // do i need to have the following conditionals if using a confirm?
+      // do i need to have the following conditionals if using a confirm? -- NO
       if (lowCase) {
-        selectedChoice.push(lowCase);
-      // } else {
-      //   lowCase = false;
-      }
+        selectedChoice.push(charLowCase);
+      // }
 
       var upperCase = window.confirm("Would you like to include upper case letters?");
       if (upperCase) {
-        selectedChoice.push(upperCase);
-      // } else {
-      //   upperCase = false;
+        selectedChoice.push(charUpperCase);
       }
 
       var useNum = window.confirm("Would you like to include numbers?");
       if (useNum) {
-        selectedChoice.push(useNum);
-      // } else {
-      //   useNum = false;
+        selectedChoice.push(charNum);
       }
 
       var useSymb = window.confirm("Would you like to include special characters?");
       if (useSymb) {
-        selectedChoice.push(useSymb);
-      // } else {
-      //   useSymb = false;
+        selectedChoice.push(charSymb);
       }
 
-      // do i need to create a variable to contain which options selected? can use conditional w/in
-      // each confirm to (add? return true?) push to add each to array randomChoice if return true?
+      console.log(selectedChoice);
+
+      // // do i need to create a variable to contain which options selected? can use conditional w/in
+      // // each confirm to (add? return true?) push to add each to array randomChoice if return true?
 
       if (lowCase == false && upperCase == false && useNum == false && useSymb == false) {
         alert("Password must contain at least one character choice.");
-      } else {
-        // do i need an else if for every possible set of chars chosen?
-        for (i=0; i < passLength.length; i++) {
-          // how do I randomize which thing it chooses of the selected options?
-          randomChoice = selectedChoice[Math.floor(Math.random() * selectedChoice)];
+      // } else {
+      //   // do i need an else if for every possible set of chars chosen?
+      //   for (i=0; i < passLength.length; i++) {
+      //     // how do I randomize which thing it chooses of the selected options?
+      //     randomChoice = selectedChoice[Math.floor(Math.random() * selectedChoice)];
         }
       }
 
