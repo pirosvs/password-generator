@@ -13,8 +13,9 @@ function writePassword() {
 
 var charLowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var charUpperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var charNum = [];
-// var charSymb = ["!", """, "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/". ":", ";", "<", "=", ">", "?", "@", "[", "\", "]", "^", "_", "`", "{", "|", "}", "~"];
+var charNum = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// do they need to be strings or can they just be ints?
+var charSymb = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"];
 
 function generatePassword()
 {
@@ -54,8 +55,9 @@ function generatePassword()
       if (lowCase == false && upperCase == false && useNum == false && useSymb == false) {
         alert("Password must contain at least one character choice.");
       } else {
+        // do i need an else if for every possible set of chars chosen?
         for (i=0; i < passLength.length; i++) {
-          
+
         }
       }
 
