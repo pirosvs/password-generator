@@ -84,5 +84,8 @@ function generatePassword()
 generateBtn.addEventListener("click", writePassword);
 
 
-// randomLetter = useLowCase[Math.floor(Math.random() * useLowCase.length)]
+// randomLowCase = useLowCase[Math.floor(Math.random() * useLowCase.length)]
+// randomUpperCase = useUpperCase[Math.floor(Math.random() * useUpperCase.length)]
+// randomNum = useNum[Math.floor(Math.random() * useNum.length)]
+// randomSymb = useSymb[Math.floor(Math.random() * useSymb.length)]
 // duch512 @ https://gist.github.com/bendc/1e6af8f2d8027f2965da
