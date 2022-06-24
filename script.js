@@ -11,11 +11,10 @@ function writePassword() {
 
 }
 
-// var passLength = 0;
-var lowCase;
-var upperCase;
-var useNum;
-var useSymb;
+var charLowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var charUpperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var charNum = [];
+// var charSymb = ["!", """, "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/". ":", ";", "<", "=", ">", "?", "@", "[", "\", "]", "^", "_", "`", "{", "|", "}", "~"];
 
 function generatePassword()
 {
@@ -23,6 +22,42 @@ function generatePassword()
   if (yesGen) {
     var passLength = window.prompt("How many characters would you like to include (must be between 8 and 128)?");
     if (passLength >= 8 || passLength <= 128) {
+      // problem begins here -- does not pop up confirms once a number is entered
+      var lowCase = window.confirm("Would you like to include lower case letters?");
+      if (lowCase) {
+        lowCase = true;
+      } else {
+        lowCase = false;
+      }
+
+      var upperCase = window.confirm("Would you like to include upper case letters?");
+      if (upperCase) {
+        upperCase = true;
+      } else {
+        upperCase = false;
+      }
+
+      var useNum = window.confirm("Would you like to include numbers?");
+      if (useNum) {
+        useNum = true;
+      } else {
+        useNum = false;
+      }
+
+      var useSymb = window.confirm("Would you like to include special characters?");
+      if (useSymb) {
+        useSymb = true;
+      } else {
+        useSymb = false;
+      }
+
+      if (lowCase == false && upperCase == false && useNum == false && useSymb == false) {
+        alert("Password must contain at least one character choice.");
+      } else {
+        for (i=0; i < passLength.length; i++) {
+          
+        }
+      }
 
     } else {
       alert("Password must be between 8 and 128 characters!");
@@ -45,3 +80,7 @@ function generatePassword()
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// randomLetter = useLowCase[Math.floor(Math.random() * useLowCase.length)]
+// duch512 @ https://gist.github.com/bendc/1e6af8f2d8027f2965da
