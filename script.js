@@ -77,9 +77,11 @@ function generatePassword()
            password = password + randomChoice();
           } console.log(password);
         }
+      } else {
+        alert("Password must be between 8 and 128 characters.");
       }
     } else {
-      alert("Password must be between 8 and 128 characters.");
+      alert("Password will not be generated.");
     }
 
   return password;
