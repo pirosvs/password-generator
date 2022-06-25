@@ -11,8 +11,7 @@ function writePassword() {
 }
 
 // KNOWN ISSUES:
-// - IF GENERATE A SECOND PASSWORD WITHOUT REFRESHING, DOUBLES -- i need to clear it afterwards a;sdkfj;skldjf
-// - DOES NOT GIVE ALERT IF NUMBER TOO HIGH, ONLY TOO LOW
+
 
 var charLowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var charUpperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -67,19 +66,24 @@ function generatePassword()
 
       // Checks that user has selected at least one type of character and tells them to go back and choose
       // at least one character type if they had not
-      if (lowCase == false && upperCase == false && useNum == false && useSymb == false) {
+      if (!lowCase && !upperCase && !useNum && !useSymb) {
         alert("Password must contain at least one character choice.");
 
       // If the user has selected all character types, loops through for the number given for password length
       // and uses our randomizing function to add each random value to a new password
-      } else if (selectedChoice == charLowCase, charUpperCase, charNum, charSymb) {
+      } else {
           for (i=0; i < passLength; i++) {
            password = password + randomChoice();
           } console.log(password);
-        }
+      }
+      
+      // If user input for password length is lower than 8 or higher than 128, alerts user that password must
+      // contain 8-128 characters and exits 
       } else {
         alert("Password must be between 8 and 128 characters.");
       }
+
+    // States that password will not be generated if confirm to make password equals false
     } else {
       alert("Password will not be generated.");
     }
