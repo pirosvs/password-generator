@@ -31,10 +31,10 @@ function generatePassword()
 {
   var yesGen = window.confirm("Would you like to generate a password?");
 
-  // Prompts user to give the length of the password desired
+  // Prompts user to give the length of the password desired and converts input string to integer
   if (yesGen) {
     var passLength = window.prompt("How many characters would you like to include (must be between 8 and 128)?");
-
+    passLength = parseInt(passLength);
 
     // Verifies that the password length will be at least 8 and below 129, prompting for which characters to include
     // if in the correct amount, otherwise tells user they need to select a number between 8-128
