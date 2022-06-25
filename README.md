@@ -5,7 +5,8 @@ This project generates a randomized password based on user inputs determining wh
 
 Skills used in this project include starting HTML and CSS, as well as JavaScript. This project uses a function with nested conditional statements and a for loop in order to create a password within the parameters of the user's input choices. Randomization function has been changed to take an argument to make it more globally useable, as below.
 
-```function randomChoice(options) {
+```
+function randomChoice(options) {
   console.log(options);
   return options[Math.floor(Math.random() * options.length)];
 }
@@ -17,10 +18,11 @@ Additionally, with the use of an empty array to which selected character sets ar
 var selectedChoice = [];
 ```
 
-```var lowCase = window.confirm("Would you like to include lower case letters?");
-      if (lowCase) {
-        selectedChoice = selectedChoice.concat(charLowCase);
-      }
+```
+var lowCase = window.confirm("Would you like to include lower case letters?");
+    if (lowCase) {
+      selectedChoice = selectedChoice.concat(charLowCase);
+    }
 ```
 
 Thus, only the selected character sets have the values of their arrays put into one larger array, and specific boolean values determining which sets are used need not be checked, we only need to confirm that at least one set has been chosen.
