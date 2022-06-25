@@ -13,7 +13,8 @@ Skills used in this project include starting HTML and CSS, as well as JavaScript
 
 Additionally, with the use of an empty array to which selected character sets are concatenated, we can consolidate our main conditional into one for loop as opposed to many. See below:
 
-```var selectedChoice = [];
+```
+var selectedChoice = [];
 ```
 
 ```var lowCase = window.confirm("Would you like to include lower case letters?");
