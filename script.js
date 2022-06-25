@@ -3,10 +3,10 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var passW = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = passW;
 
 }
 
@@ -24,11 +24,13 @@ var selectedChoice = [];
 
 // Randomizes which value in the array selectedChoice will be chosen
 function randomChoice() {
-  return selectedChoice = selectedChoice[Math.floor(Math.random() * selectedChoice.length)];
+  console.log(selectedChoice);
+  return selectedChoice[Math.floor(Math.random() * selectedChoice.length)];
 }
 
 function generatePassword()
 {
+  var password = "";
   var yesGen = window.confirm("Would you like to generate a password?");
 
   // Prompts user to give the length of the password desired and converts input string to integer
@@ -71,7 +73,7 @@ function generatePassword()
       // If the user has selected all character types, loops through for the number given for password length
       // and uses our randomizing function to add each random value to a new password
       } else if (selectedChoice == charLowCase, charUpperCase, charNum, charSymb) {
-          for (i=0; i < passLength.length; i++) {
+          for (i=0; i < passLength; i++) {
            password = password + randomChoice();
           } console.log(password);
         }

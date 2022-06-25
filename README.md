@@ -10,7 +10,7 @@
 - Uses alerts, prompts, confirms (conditionals? functions? etc -- add as project continues)
 
 ## Credits
-Credit to the Trilogy Education in tandem with UCB coding bootcamp for the code for the design of the page.
+Credit to the Trilogy Education in tandem with UCB coding bootcamp for the code for the design of the page. d.kang109 BCS
 
 ## License
 This project falls under the MIT license.
