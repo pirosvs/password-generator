@@ -22,9 +22,9 @@ var charSymb = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".",
 var selectedChoice = [];
 
 // Randomizes which value in the array selectedChoice will be chosen
-function randomChoice() {
-  console.log(selectedChoice);
-  return selectedChoice[Math.floor(Math.random() * selectedChoice.length)];
+function randomChoice(options) {
+  console.log(options);
+  return options[Math.floor(Math.random() * options.length)];
 }
 
 function generatePassword()
@@ -69,11 +69,11 @@ function generatePassword()
       if (!lowCase && !upperCase && !useNum && !useSymb) {
         alert("Password must contain at least one character choice.");
 
-      // If the user has selected all character types, loops through for the number given for password length
-      // and uses our randomizing function to add each random value to a new password
+      // If the user has selected at least one or more character types, loops through for the number given for password 
+      // length and uses our randomizing function to add each random value to a new password
       } else {
           for (i=0; i < passLength; i++) {
-           password = password + randomChoice();
+           password = password + randomChoice(selectedChoice);
           } console.log(password);
       }
       
