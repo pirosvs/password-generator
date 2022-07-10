@@ -4,9 +4,9 @@
 
 ## Description
 
-<img src="./images/expassword1.png" alt="Short random password with many character sets example"/> (https://ibb.co/Ss8D1d5)
-<img src="./images/ex-password-max.png" alt="Long random password using max length example"/> (https://ibb.co/rxy07dJ)
-<img src="./images/ex-password-fail.png" alt="Password outside length bounds error alert"/> (https://ibb.co/5kPPwnz)
+<img src="./images/expassword1.png" alt="Short random password with many character sets example"/>
+<img src="./images/ex-password-max.png" alt="Long random password using max length example"/>
+<img src="./images/ex-password-fail.png" alt="Password outside length bounds error alert"/>
 
 This project generates a randomized password based on user inputs determining which characters to use and the length of the password. This allows for the user to quickly and easily generate a new, secure password through interacting with a few simple questions. Data security is of ever increasing concern, as has consistently been the case for years. Especially with the popularization of password managers, randomized passwords are increasingly useable even for people who will not go out of their way to invest in better data security. Additionally, thinking of a truly random password is harder than one might image, as humans have a tendency to seek out patterns and create memorable passwords that, while more secure than typing a pet name and adding 1 to the end, do not reach the greatest potential for security. This project acknowledges that need and rise in demand for secure, randomized passwords and offers one method of creating these passwords. Finally, this project allows the exclusion of certain characters so that the user can customize which special characters they prefer, are more likely to remember, or are able to type at the time of creation.
 
