@@ -1,12 +1,12 @@
 # password-generator
 
+<a href="https://pirosvs.github.io/password-generator/">Click here to view the site</a>
+
 ## Description
 
-Deployment link: (https://pirosvs.github.io/password-generator/)
-
-![Short random password with many character sets example] (https://ibb.co/Ss8D1d5)
-![Long random password using max length example] (https://ibb.co/rxy07dJ)
-![Password outside length bounds error alert] (https://ibb.co/5kPPwnz)
+<img src="./images/expassword1.png" alt="Short random password with many character sets example"/> (https://ibb.co/Ss8D1d5)
+<img src="./images/ex-password-max.png" alt="Long random password using max length example"/> (https://ibb.co/rxy07dJ)
+<img src="./images/ex-password-fail.png" alt="Password outside length bounds error alert"/> (https://ibb.co/5kPPwnz)
 
 This project generates a randomized password based on user inputs determining which characters to use and the length of the password. This allows for the user to quickly and easily generate a new, secure password through interacting with a few simple questions. Data security is of ever increasing concern, as has consistently been the case for years. Especially with the popularization of password managers, randomized passwords are increasingly useable even for people who will not go out of their way to invest in better data security. Additionally, thinking of a truly random password is harder than one might image, as humans have a tendency to seek out patterns and create memorable passwords that, while more secure than typing a pet name and adding 1 to the end, do not reach the greatest potential for security. This project acknowledges that need and rise in demand for secure, randomized passwords and offers one method of creating these passwords. Finally, this project allows the exclusion of certain characters so that the user can customize which special characters they prefer, are more likely to remember, or are able to type at the time of creation.
 
@@ -42,8 +42,5 @@ Credit to the Trilogy Education in tandem with UCB coding bootcamp for the code 
 ## License
 This project falls under the MIT license.
 
-
 ## Author
-Damien Armstrong can be found on:
-Linkedin (https://www.linkedin.com/in/damien-armstrong-412319138/)
-Github (https://github.com/pirosvs)
+Damien Armstrong can be found on: <a href="https://www.linkedin.com/in/damien-armstrong-412319138/">Linkedin</a>, <a href="https://github.com/pirosvs">Github</a>
